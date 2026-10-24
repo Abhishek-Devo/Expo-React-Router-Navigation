@@ -10,6 +10,8 @@ import {
   createBottomTabScreen,
 } from '@react-navigation/bottom-tabs';
 import DynamicTabNavigator from './src/navigator/tabs/DynamicTabNavigator';
+import StaticDrawer from './src/navigator/drawer/StaticDrawer';
+import DynamicDrawer from './src/navigator/drawer/DynamicDrawer';
 
 function HomeScreen() {
   const navigation = useNavigation();
@@ -47,5 +49,6 @@ const MyTabs = createBottomTabNavigator({
 const Navigation = createStaticNavigation(MyTabs);
 
 export default function App() {
-  return <DynamicTabNavigator />;
+  // return <StaticDrawer/>
+  return <DynamicDrawer/>
 }
